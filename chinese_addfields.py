@@ -43,9 +43,8 @@ while filecounter < 2:
             code_end = ""
         elif item["original"].startswith("&"):
             code_begin = "<blockquote class='gatha'><p><span class='verse-line'>"
-            new_item = SegmentObject(item["segmentnr"],item["original"].strip("&"),code_begin,code_end).object
-            code_begin = ""
             code_end = "</span>"
+            new_item = SegmentObject(item["segmentnr"],item["original"].strip("&"),code_begin,code_end).object
             startblock = True
         elif item["original"].endswith("@"):
             code_end = "</span></p></blockquote>"
@@ -58,16 +57,16 @@ while filecounter < 2:
                 code_end = "</span></p>"
                 new_item = SegmentObject(item["segmentnr"],item["original"].strip("¶"),code_begin,code_end).object
                 code_begin="<p><span class='verse-line'>"
-                code_end = ""
             else:
-                if code_end:
-                    new_item = SegmentObject(item["segmentnr"],item["original"],code_begin,code_end).object
-                    code_end = ""
-                    code_begin = "<span class='verse-line'>"
-                else:
-                    new_item = SegmentObject(item["segmentnr"],item["original"],code_begin,code_end).object
+                if code_begin == "<p><span class='verse-line'>":
                     code_end = "</span>"
-                    code_begin = ""
+                    new_item = SegmentObject(item["segmentnr"],item["original"],code_begin,code_end).object
+                else:
+                    code_end = "</span>"
+                    code_begin = "<span class='verse-line'>"
+                    new_item = SegmentObject(item["segmentnr"],item["original"],code_begin,code_end).object
+
+
         else:
             new_item = SegmentObject(item["segmentnr"],item["original"],code_begin,code_end).object
             code_begin = ""

@@ -24,7 +24,7 @@
     "code_end": ""
   },
   {
-    "segmentnr": "t0662b15",
+    "segmentnr": "t0662b16",
     "original": "「苾芻當知！我觀世間，無別一法，覆障群生，馳騁流轉生死長途，如無明蓋。",
     "code_begin": "",
     "code_end": ""
@@ -69,72 +69,72 @@
     "segmentnr": "t0662b22",
     "original": "「無別有一法，",
     "code_begin": "<blockquote class='gatha'><p><span class='verse-line'>",
-    "code_end": ""
+    "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b22",
     "original": "覆障諸群生，",
-    "code_begin": "",
+    "code_begin": "<span class='verse-line'>",
     "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b23",
     "original": "馳流生死途，",
     "code_begin": "<span class='verse-line'>",
-    "code_end": ""
+    "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b23",
     "original": "如無明蓋者。",
-    "code_begin": "",
-    "code_end": "</span>"
+    "code_begin": "<span class='verse-line'>",
+    "code_end": "</span></p>"
   },
   {
     "segmentnr": "t0662b24",
     "original": "無明大愚闇，",
-    "code_begin": "<span class='verse-line'>",
-    "code_end": ""
+    "code_begin": "<p><span class='verse-line'>",
+    "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b24",
     "original": "由斯久流轉，",
-    "code_begin": "",
+    "code_begin": "<p><span class='verse-line'>",
     "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b25",
     "original": "彼此有往來，",
-    "code_begin": "<span class='verse-line'>",
-    "code_end": ""
+    "code_begin": "<p><span class='verse-line'>",
+    "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b25",
     "original": "昇沈高下趣。",
-    "code_begin": "",
+    "code_begin": "<p><span class='verse-line'>",
     "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b26",
     "original": "若破無明蓋，",
-    "code_begin": "<span class='verse-line'>",
-    "code_end": ""
+    "code_begin": "<p><span class='verse-line'>",
+    "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b26",
     "original": "解脫貪愛網，",
-    "code_begin": "",
+    "code_begin": "<p><span class='verse-line'>",
     "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b27",
     "original": "不處生死流，",
-    "code_begin": "<span class='verse-line'>",
-    "code_end": ""
+    "code_begin": "<p><span class='verse-line'>",
+    "code_end": "</span>"
   },
   {
     "segmentnr": "t0662b27",
     "original": "以無彼因故。」",
-    "code_begin": "",
+    "code_begin": "<p><span class='verse-line'>",
     "code_end": "</span></p></blockquote>"
   },
   {
