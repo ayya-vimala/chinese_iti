@@ -22,15 +22,15 @@ def addHeader(counter, heading):
     html_list = {}
 
     root_list["lzh-iti"+str(counter)+":0.1"] = heading.textname
-    root_list["lzh-iti"+str(counter)+":0.2"] = heading.textwriter
-    root_list["lzh-iti"+str(counter)+":0.3"] = heading.textsub
-    root_list["lzh-iti"+str(counter)+":0.4"] = "("+str(counter)+")"
+    root_list["lzh-iti"+str(counter)+":0.2"] = heading.textsub
+    root_list["lzh-iti"+str(counter)+":0.3"] = "("+str(counter)+")"
+    root_list["lzh-iti"+str(counter)+":0.4"] = heading.textwriter
     reference_list["lzh-iti"+str(counter)+":0.1"] = "t17.0765"
 
     html_list["lzh-iti"+str(counter)+":0.1"] = "<article id='lzh-iti"+str(counter)+"'><header><ul><li class='division'>{}</li>"
-    html_list["lzh-iti"+str(counter)+":0.2"] = "<li class='subheading'>{}</li>"
-    html_list["lzh-iti"+str(counter)+":0.3"] = "<li class='subdivision'>{}</li></ul>"
-    html_list["lzh-iti"+str(counter)+":0.4"] = "<h1 class='sutta-title'>{}</h1></header>"
+    html_list["lzh-iti"+str(counter)+":0.2"] = "<li class='subdivision'>{}</li></ul>"
+    html_list["lzh-iti"+str(counter)+":0.3"] = "<h1 class='sutta-title'>{}</h1></header>"
+    html_list["lzh-iti"+str(counter)+":0.4"] = "<li class='subheading'>{}</li>"
 
     return root_list, reference_list, html_list
 

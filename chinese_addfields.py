@@ -61,6 +61,7 @@ while filecounter < 2:
                 if code_begin == "<p><span class='verse-line'>":
                     code_end = "</span>"
                     new_item = SegmentObject(item["segmentnr"],item["original"],code_begin,code_end).object
+                    code_begin = ""
                 else:
                     code_end = "</span>"
                     code_begin = "<span class='verse-line'>"
