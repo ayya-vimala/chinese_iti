@@ -21,16 +21,16 @@ def addHeader(counter, heading):
     reference_list = {}
     html_list = {}
 
-    root_list["lzh-iti"+str(counter)+":0.1"] = heading.textname
-    root_list["lzh-iti"+str(counter)+":0.2"] = heading.textsub
-    root_list["lzh-iti"+str(counter)+":0.3"] = "("+str(counter)+")"
-    root_list["lzh-iti"+str(counter)+":0.4"] = heading.textwriter
-    reference_list["lzh-iti"+str(counter)+":0.1"] = "t17.0765"
+    root_list["t765."+str(counter)+":0.1"] = heading.textname
+    root_list["t765."+str(counter)+":0.2"] = heading.textsub
+    root_list["t765."+str(counter)+":0.3"] = "("+str(counter)+")"
+    root_list["t765."+str(counter)+":0.4"] = heading.textwriter
+    reference_list["t765."+str(counter)+":0.1"] = "t17.0765"
 
-    html_list["lzh-iti"+str(counter)+":0.1"] = "<article id='lzh-iti"+str(counter)+"'><header><ul><li class='division'>{}</li>"
-    html_list["lzh-iti"+str(counter)+":0.2"] = "<li class='subdivision'>{}</li></ul>"
-    html_list["lzh-iti"+str(counter)+":0.3"] = "<h1 class='sutta-title'>{}</h1></header>"
-    html_list["lzh-iti"+str(counter)+":0.4"] = "<li class='subheading'>{}</li>"
+    html_list["t765."+str(counter)+":0.1"] = "<article id='t765."+str(counter)+"'><header><ul><li class='division'>{}</li>"
+    html_list["t765."+str(counter)+":0.2"] = "<li class='subdivision'>{}</li></ul>"
+    html_list["t765."+str(counter)+":0.3"] = "<h1 class='sutta-title'>{}</h1></header>"
+    html_list["t765."+str(counter)+":0.4"] = "<li class='subheading'>{}</li>"
 
     return root_list, reference_list, html_list
 
@@ -56,9 +56,9 @@ while filecounter < 2:
         if item["original"] == "吾從世尊聞如是語：" or item["original"] == "復從世尊聞如是語：" or item["segmentnr"] == "t0699b13":
             if 'fileOut' in locals():
                 if item["segmentnr"] == "t0699b13":
-                    root_list["lzh-iti"+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["original"]
-                    reference_list["lzh-iti"+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["segmentnr"]
-                    html_list["lzh-iti"+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["code_begin"]+"{}"+item["code_end"]
+                    root_list["t765."+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["original"]
+                    reference_list["t765."+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["segmentnr"]
+                    html_list["t765."+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["code_begin"]+"{}"+item["code_end"]
                 fileOut.write(json.dumps(root_list, ensure_ascii=False, indent=2))
                 fileOutReference.write(json.dumps(reference_list, ensure_ascii=False, indent=2))
                 fileOuthtml.write(json.dumps(html_list, ensure_ascii=False, indent=2))
@@ -69,13 +69,13 @@ while filecounter < 2:
 
             root_list, reference_list, html_list = addHeader(counter, heading)
 
-            root_list["lzh-iti"+str(counter)+":1.0"] = item["original"]
-            reference_list["lzh-iti"+str(counter)+":1.0"] = item["segmentnr"]
-            html_list["lzh-iti"+str(counter)+":1.0"] = item["code_begin"]+"{}"+item["code_end"]
+            root_list["t765."+str(counter)+":1.0"] = item["original"]
+            reference_list["t765."+str(counter)+":1.0"] = item["segmentnr"]
+            html_list["t765."+str(counter)+":1.0"] = item["code_begin"]+"{}"+item["code_end"]
 
-            fileOut = open(outputroot_dir+'lzh-iti'+str(counter)+'_root-lzh-sct.json','w', encoding='utf8')
-            fileOutReference = open(outputreference_dir+'lzh-iti'+str(counter)+'_reference.json','w', encoding='utf8')
-            fileOuthtml = open(outputhtml_dir+'lzh-iti'+str(counter)+'_html.json','w', encoding='utf8')
+            fileOut = open(outputroot_dir+'t765.'+str(counter)+'_root-lzh-sct.json','w', encoding='utf8')
+            fileOutReference = open(outputreference_dir+'t765.'+str(counter)+'_reference.json','w', encoding='utf8')
+            fileOuthtml = open(outputhtml_dir+'t765.'+str(counter)+'_html.json','w', encoding='utf8')
 
             parcounter = 1
             secparcounter = 1
@@ -85,10 +85,10 @@ while filecounter < 2:
                 if "<p>" in item["code_begin"]:
                     parcounter += 1
                     secparcounter = 0
-                root_list["lzh-iti"+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["original"]
-                html_list["lzh-iti"+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["code_begin"]+"{}"+item["code_end"]
+                root_list["t765."+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["original"]
+                html_list["t765."+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["code_begin"]+"{}"+item["code_end"]
                 if not item["segmentnr"] in reference_list.values():
-                    reference_list["lzh-iti"+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["segmentnr"]
+                    reference_list["t765."+str(counter)+":"+str(parcounter)+'.'+str(secparcounter)] = item["segmentnr"]
                 secparcounter += 1
     filecounter += 1
 
